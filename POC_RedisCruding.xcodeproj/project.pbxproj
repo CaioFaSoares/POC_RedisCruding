@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D64B655329974962004E5C7F /* RedisInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B655229974962004E5C7F /* RedisInteractable.swift */; };
+		D64B655929982F5D004E5C7F /* SwiftRedis in Frameworks */ = {isa = PBXBuildFile; productRef = D64B655829982F5D004E5C7F /* SwiftRedis */; };
 		D6C96490299722AD002C7147 /* POC_RedisCrudingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9648F299722AD002C7147 /* POC_RedisCrudingApp.swift */; };
 		D6C96492299722AD002C7147 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C96491299722AD002C7147 /* ContentView.swift */; };
 		D6C96494299722AF002C7147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C96493299722AF002C7147 /* Assets.xcassets */; };
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D64B655229974962004E5C7F /* RedisInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedisInteractable.swift; sourceTree = "<group>"; };
 		D6C9648C299722AD002C7147 /* POC_RedisCruding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POC_RedisCruding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C9648F299722AD002C7147 /* POC_RedisCrudingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POC_RedisCrudingApp.swift; sourceTree = "<group>"; };
 		D6C96491299722AD002C7147 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64B655929982F5D004E5C7F /* SwiftRedis in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,7 @@
 		D6C9648E299722AD002C7147 /* POC_RedisCruding */ = {
 			isa = PBXGroup;
 			children = (
+				D6C964BC29972356002C7147 /* Services */,
 				D6C9648F299722AD002C7147 /* POC_RedisCrudingApp.swift */,
 				D6C96491299722AD002C7147 /* ContentView.swift */,
 				D6C96493299722AF002C7147 /* Assets.xcassets */,
@@ -127,6 +132,14 @@
 			path = POC_RedisCrudingUITests;
 			sourceTree = "<group>";
 		};
+		D6C964BC29972356002C7147 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D64B655229974962004E5C7F /* RedisInteractable.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +156,9 @@
 			dependencies = (
 			);
 			name = POC_RedisCruding;
+			packageProductDependencies = (
+				D64B655829982F5D004E5C7F /* SwiftRedis */,
+			);
 			productName = POC_RedisCruding;
 			productReference = D6C9648C299722AD002C7147 /* POC_RedisCruding.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +231,9 @@
 				Base,
 			);
 			mainGroup = D6C96483299722AD002C7147;
+			packageReferences = (
+				D64B655729982F5D004E5C7F /* XCRemoteSwiftPackageReference "Kitura-redis" */,
+			);
 			productRefGroup = D6C9648D299722AD002C7147 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C96492299722AD002C7147 /* ContentView.swift in Sources */,
+				D64B655329974962004E5C7F /* RedisInteractable.swift in Sources */,
 				D6C96490299722AD002C7147 /* POC_RedisCrudingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +603,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D64B655729982F5D004E5C7F /* XCRemoteSwiftPackageReference "Kitura-redis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/Kitura-redis.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D64B655829982F5D004E5C7F /* SwiftRedis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D64B655729982F5D004E5C7F /* XCRemoteSwiftPackageReference "Kitura-redis" */;
+			productName = SwiftRedis;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6C96484299722AD002C7147 /* Project object */;
 }
